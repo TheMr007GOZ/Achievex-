@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title>{{ title }} - Achievex</title>
+        {% else %}
+        <title>Achievex</title>
+        {% endif %}
+        <!-- Bootstrap core CSS -->
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="{{ url_for('static', filename='css/product.css')}}" rel="stylesheet">
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+        {% include 'footer.html' %}
+    </body>
+</html>
